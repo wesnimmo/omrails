@@ -1,0 +1,23 @@
+<div class="container">
+
+	<p>
+	  <strong>Title:</strong>
+	  <%= @link.title %>
+	</p>
+
+	<p>
+	  <strong>Url:</strong>
+	  <%= @link.url %>
+	</p>
+
+	<p>
+	  <strong>User:</strong>
+	  <%= @link.user %>
+	</p>
+	
+	<% if @link.user == current_user %>
+		<%= link_to 'Edit', edit_link_path(@link) %> |
+	<% end %>
+	<%= link_to 'Back', links_path %>
+
+</div> <!-- container -->
