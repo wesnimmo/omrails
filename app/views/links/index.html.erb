@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="offset-md-3 col-md-6">
       <h2>Share a News Story</h2>
       <h4>Add your link and start the discussion of today's current topics!</h4>
 
@@ -20,7 +20,7 @@
               <td><%= link.title %></td>
               <td><%= link.url %></td>
               <td><%= link_to 'Show', link %></td>
-               <td><%= link.user %></td>
+               <td><%= link.user.email %></td>
               <% if link.user == current_user %>
                 <td><%= link_to 'Edit', edit_link_path(link) %></td>
                 <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
